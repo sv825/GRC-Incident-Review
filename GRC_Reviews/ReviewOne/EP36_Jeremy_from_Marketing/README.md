@@ -7,9 +7,9 @@ Methodology/Terminology:
 I utilize the NIST Special Publication 800-53 security controls to identify and determine policy gaps and think of appropriate actionable, policy-level remediation strategies.
 
 Document Structure:
-| Heading 1 File | Heading 2 Purpose | Heading 3 GRC Skill Demonstrated |
+| File | Purpose | GRC Skill Demonstrated |
 | :---| :--- | :---|
-| Cell A1 grc_incident_review.md | Cell B1 The public analysis and discussion post | Cell C1 Incident Analysis, Framework Mapping |
-| Cell A2 POLICY_RECOMMENDATIONS.md | Cell B2 Structured documentation of required policy changes | Cell C2 Policy Drafting & Planning |
+| grc_incident_review.md | The public analysis and discussion post | Incident Analysis, Framework Mapping |
+| POLICY_RECOMMENDATIONS.md | Structured documentation of required policy changes | Policy Drafting & Planning |
 
 
