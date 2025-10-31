@@ -16,6 +16,9 @@ There were still a few identified failures that necessitate the immediate, manda
 
 ## III. Identified Policy Gaps and Root Cause Analysis
 The following critical policy gaps and corresponding NIST SP 800-53 controls were compromised during the penetration test:
+| Incident Failure | Affected NIST SP 800-53 Control | Root Cause Analysis |
+|------------------|---------------------------------|---------------------|
+|**Physical Security Breach (IT Shack)** | **PE-3** Physical Access Control (NIST, 2020a) | Failed to implement physical security such as cameras and secured doors, and severe user diligence as there was a door stopper in a restricted area. |
 
 
 
@@ -26,7 +29,7 @@ The following critical policy gaps and corresponding NIST SP 800-53 controls wer
 
 
 ## VI. References
-Rhysider, J. (Host). (2019, April 16). Jeremy from Marketing (Episode 36) [Audio podcast]. Darknet Diaries.
+Rhysider, J. (Host). (2022, August 11). Jeremy from Marketing (Episode 36) [Audio podcast - YouTube]. Darknet Diaries.
 
 National Institute of Standards and Technology. (2020a, September). Security and Privacy Controls for Information Systems and Organizations (NIST Special Publication 800-53, Revision 5). U.S. Department of Commerce.
 
