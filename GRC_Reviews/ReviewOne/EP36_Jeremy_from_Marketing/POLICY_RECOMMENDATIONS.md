@@ -24,7 +24,10 @@ The following critical policy gaps and corresponding NIST SP 800-53 controls wer
 |**Unencrypted Assets** |**SC-28** Protecting of information at rest  to encrypt sensitive data when it is stored (NIST, 2020a)| There is an inconsistent enforcement of the Full Disk Encryption Standard Operating Procedures; The systems were not consistently managed back to the secure baseline. This allowed two laptops to "drift" into an vulnerable state while being stored.|
 |**Unquoted Service Path Exploit**|**CM-6** Configuration Settings, **AC-3** Access Enforcement (NIST, 2020a)| The failure to properly quote service path directly violates the requirement for secure baseline configuration; the policy was weakened by the Third-party access control tool as it's configuration overrode the Native Windows **Write** access permissions allowing the Red Team the ability to drop his malware into the system directory, enabling him to gain remote _System Level_ privileges.|
 
-
+## IV. Formal Policy Recommendations
+The following recommendations must be incorporated into the organizations's authoritative security policies, SOPs, and employee handbooks.
+### 1. Physical Security Enhancements (PE-3)
+**Policy Statement:**
 
 
 
