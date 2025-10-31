@@ -21,7 +21,8 @@ The following critical policy gaps and corresponding NIST SP 800-53 controls wer
 |**Physical Security Breach (IT Shack)** |**PE-3** Physical Access Control (NIST, 2020a) | Failed to implement physical security such as cameras and secured doors, and severe user diligence as there was a door stopper in a restricted area. |
 |**Vishing/MFA Bypass** |**AT-2** Security Awareness Training, **AT-3** Role-Based Training (NIST, 2020a) | There was a lack of awareness of social engineering training focused on Vishing vectors and MFA protocol boundaries|
 |**Weak Admin Password** |**IA-5** Authenticator Management (NIST, 2020a)| There was use of publicly known organizational context, such as the company name and year even with a strong user password policy in place.|
-|**Unencrypted Assets** |**SC-28** Protecting of information at rest  to encrypt sensitive data when it is stored (NIST, 2020a)| There is an inconsistent enforcement of the Full Disk Encryption Standard Operating Procedures; The systems were not consistently 
+|**Unencrypted Assets** |**SC-28** Protecting of information at rest  to encrypt sensitive data when it is stored (NIST, 2020a)| There is an inconsistent enforcement of the Full Disk Encryption Standard Operating Procedures; The systems were not consistently managed back to the secure baseline. This allowed two laptops to "drift" into an vulnerable state while being stored.|
+|**Unquoted Service Path Exploit**|**CM-6** Configuration Settings, **AC-3** Access Enforcement (NIST, 2020a)| The failure to properly quote service path directly violates the requirement for secure baseline configuration; the policy was weakened by the Third-party access control tool as it's configuration overrode the Native Windows **Write** access permissions allowing the Red Team the ability to drop his malware into the system directory, enabling him to gain remote _System Level_ privileges.|
 
 
 
