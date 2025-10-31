@@ -17,3 +17,17 @@ There were still a few identified failures that necessitate the immediate, manda
 ## III. Identified Policy Gaps and Root Cause Analysis
 The following critical policy gaps and corresponding NIST SP 800-53 controls were compromised during the penetration test:
 
+
+
+
+
+
+
+
+
+## VI. References
+Rhysider, J. (Host). (2019, April 16). Jeremy from Marketing (Episode 36) [Audio podcast]. Darknet Diaries.
+
+National Institute of Standards and Technology. (2020a, September). Security and Privacy Controls for Information Systems and Organizations (NIST Special Publication 800-53, Revision 5). U.S. Department of Commerce.
+
+National Institute of Standards and Technology. (2020b, June). Digital Identity Guidelines: Authentication and Lifecycle Management (NIST Special Publication 800-63B, Revision 3). U.S. Department of Commerce.
