@@ -28,8 +28,8 @@ The following critical policy gaps and corresponding NIST SP 800-53 controls wer
 The following recommendations must be incorporated into the organizations's authoritative security policies, SOPs, and employee handbooks.
 ### I. Physical Security Enhancements (PE-3)
 **Policy Statement:** The company should implement layered physical access controls for all restricted areas, including data centers, IT shacks, network closets, and other IT euipment storage rooms.<br>
-      1.**Mandatory Surveillance:** Install and maintain 24/7 video surveillance positioned to monitor 
-      2.**Access Integrity (Zero Tolerance):**
+      1.**Mandatory Surveillance:** Install and maintain 24/7 video surveillance positioned to monitor all entry and exit points of restricted areas (i.e. IT Shack). Retain all footage for a minimum of 60 days.<br>
+      2.**Access Integrity (Zero Tolerance):**  <br>
       3. **Asset Handling SOP:**
 
 
