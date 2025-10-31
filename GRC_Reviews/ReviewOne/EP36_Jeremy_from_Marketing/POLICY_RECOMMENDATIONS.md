@@ -26,8 +26,11 @@ The following critical policy gaps and corresponding NIST SP 800-53 controls wer
 
 ## IV. Formal Policy Recommendations
 The following recommendations must be incorporated into the organizations's authoritative security policies, SOPs, and employee handbooks.
-### 1. Physical Security Enhancements (PE-3)
-**Policy Statement:**
+### I. Physical Security Enhancements (PE-3)
+**Policy Statement:** 
+      1.**Mandatory Surveillance:**
+      2.**Access Integrity (Zero Tolerance):**
+      3. **Asset Handling SOP:**
 
 
 
