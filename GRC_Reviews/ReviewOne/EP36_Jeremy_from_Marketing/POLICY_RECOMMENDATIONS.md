@@ -18,9 +18,10 @@ There were still a few identified failures that necessitate the immediate, manda
 The following critical policy gaps and corresponding NIST SP 800-53 controls were compromised during the penetration test:
 | Incident Failure | Affected NIST SP 800-53 Control | Root Cause Analysis |
 |------------------|---------------------------------|---------------------|
-|**Physical Security Breach (IT Shack)** | **PE-3** Physical Access Control (NIST, 2020a) | Failed to implement physical security such as cameras and secured doors, and severe user diligence as there was a door stopper in a restricted area. |
-
-
+|**Physical Security Breach (IT Shack)** |**PE-3** Physical Access Control (NIST, 2020a) | Failed to implement physical security such as cameras and secured doors, and severe user diligence as there was a door stopper in a restricted area. |
+|**Vishing/MFA Bypass** |**AT-2** Security Awareness Training, **AT-3** Role-Based Training (NIST, 2020a) | There was a lack of awareness of social engineering training focused on Vishing vectors and MFA protocol boundaries|
+|**Weak Admin Password** |**IA-5** Authenticator Management (NIST, 2020a)| There was use of publicly known organizational context, such as the company name and year even with a strong user password policy in place.|
+|**Unencrypted Assets** |**SC-28** Protecting of information at rest  to encrypt sensitive data when it is stored (NIST, 2020a)| There is an inconsistent enforcement of the Full Disk Encryption Standard Operating Procedures; The systems were not consistently 
 
 
 
