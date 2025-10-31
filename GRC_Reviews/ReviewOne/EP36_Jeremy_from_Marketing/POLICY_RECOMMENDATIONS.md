@@ -10,5 +10,10 @@ However, it should be noted that the Blue Team demonstrated a high degree of def
 There were still a few identified failures that necessitate the immediate, mandatory updates to corporate security policies to close the human and configuration-level exploitable areas. 
 
 ## II. Scope and Methodology
+**Scope:** It addresses the deficiencies related to physical security, privileged access management, user training, and information system component configuration.
 
+**Methodology:** The NIST Special Publication 800-53 Revision 5, NIST Special Publication 800-63 Revision 3, and Jack Rhysider's podcast episode were utilized to map observed incident failures to specific controls
+
+## III. Identified Policy Gaps and Root Cause Analysis
+The following critical policy gaps and corresponding NIST SP 800-53 controls were compromised during the penetration test:
 
