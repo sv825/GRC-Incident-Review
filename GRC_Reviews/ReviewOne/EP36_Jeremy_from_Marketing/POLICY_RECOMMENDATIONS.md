@@ -33,8 +33,8 @@ The following recommendations must be incorporated into the organizations's auth
       3. **Asset Handling SOP:** Implement an audit proccess on removing or moving the IT assets from restrictetd areas which also require one or more person sign-office and a documented inventory done.
 
 ### II. Security Awareness Training Overhaul (AT-2, AT-3)
-**Policy Statement:** <br>
-      1. **Mandatory Vishing Simulation Drills:** <br>
+**Policy Statement:** The company should mandate annual, practical and role-specific security awareness training especially on social engineering tactics and defense. <br>
+      1. **Mandatory Vishing Simulation Drills:** Conduct  <br>
       2. **MFA Protocol Mandate:** <br>
       3. **Remote Access Diligence (AU-6):** <br>
 
