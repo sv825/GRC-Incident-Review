@@ -53,11 +53,11 @@ The following recommendations must be incorporated into the organizations's auth
 ## V. Next Steps & Implementation Plan
 |**Phase**| **Task** | **Responsible Team** | **Time**|
 |---------------------|---------------------|---------------------|---------------------|
-|**I. Policy Approval**|                       |Leaders|**0-2 weeks**|
-|**II. Technical Remediation**|              |IT Department|**2-4 weeks**|
-|**III. Access Control Review**|             |IT Department Head|**4-6 weeks**|
-|**IV. Training Execution**|                 |IT Department|**4-8 weeks**|
-|**V. Audit & Verification**|                |Management Review|**3 months**|
+|**I. Policy Approval**|Draft a Policy Review and have the Executive sign-off on it.|Leaders|**0-2 weeks**|
+|**II. Technical Remediation**|Install surveillance at all restricted areas. Implement automated FDE compliance checks and rules. **Make all local administrator passwords random and strong**|IT Department|**2-4 weeks**|
+|**III. Access Control Review**|Teams must review and configure third-party access tools to enssure least privilege is correctly enforced.|IT Department Head|**4-6 weeks**|
+|**IV. Training Execution**|Develop new and updated Vishing simulation contentt for drills. Then conduct a company-wide drill and targeted retraining.|IT Department|**4-8 weeks**|
+|**V. Audit & Verification**|Perform an audit to verify if thiss policy is adhered to 100%. If found non-compliant, then within the week theere should be a remediation plan followed by the management and leadership review.|Management Review|**3 months**|
  
 
 
