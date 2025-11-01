@@ -30,7 +30,28 @@ The following recommendations must be incorporated into the organizations's auth
 **Policy Statement:** The company should implement layered physical access controls for all restricted areas, including data centers, IT shacks, network closets, and other IT euipment storage rooms.<br>
       1.**Mandatory Surveillance:** Install and maintain 24/7 video surveillance positioned to monitor all entry and exit points of restricted areas (i.e. IT Shack). Retain all footage for a minimum of 60 days.<br>
       2.**Access Integrity (Zero Tolerance):** Placing door stoppers to keep security doors of any type open is explicitly forbidden. Any door to an unauthorized or restricted room found to be open should trigger an automatic security incident response and mandatory retraining for the responsible department. <br>
-      3. **Asset Handling SOP:** 
+      3. **Asset Handling SOP:** Implement an audit proccess on removing or moving the IT assets from restrictetd areas which also require one or more person sign-office and a documented inventory done.
+
+### II. Security Awareness Training Overhaul (AT-2, AT-3)
+**Policy Statement:** <br>
+      1. **Mandatory Vishing Simulation Drills:** <br>
+      2. **MFA Protocol Mandate:** <br>
+      3. **Remote Access Diligence (AU-6):** <br>
+
+### III. Authenticator Management (IA-5)
+**Policy Statement:** <br>
+      1. **Local Administrator Password Rotation:** <br>
+      2. **Banned List Enforcement:** <br>
+      3. **Complexity Requirements:** <br>
+
+### IV. Configuration & Access Control Management (CM-6, SC-28, AC-3)
+**Policy Statement:** <br>
+      1. **Mandatory Encryption SOP:** <br>
+      2. **Third-Party Access Control Review:** <br>
+      3. **System Integrity & Monitoring (SI-4, CM-6):** <br>
+
+## V. Next Steps & Implementation Plan
+
 
 
 
