@@ -17,7 +17,7 @@ There were still a few identified failures that necessitate the immediate, manda
 ## III. Identified Policy Gaps and Root Cause Analysis
 The following critical policy gaps and corresponding NIST SP 800-53 controls were compromised during the penetration test:
 | Incident Failure | Affected NIST SP 800-53 Control | Root Cause Analysis |
-|------------------|---------------------------------|---------------------|
+|---------------------|---------------------|---------------------|
 |**Physical Security Breach (IT Shack)** |**PE-3** Physical Access Control (NIST, 2020a) | Failed to implement physical security such as cameras and secured doors, and severe user diligence as there was a door stopper in a restricted area. |
 |**Vishing/MFA Bypass** |**AT-2** Security Awareness Training, **AT-3** Role-Based Training (NIST, 2020a) | There was a lack of awareness of social engineering training focused on Vishing vectors and MFA protocol boundaries|
 |**Weak Admin Password** |**IA-5** Authenticator Management (NIST, 2020a)| There was use of publicly known organizational context, such as the company name and year even with a strong user password policy in place.|
@@ -51,13 +51,13 @@ The following recommendations must be incorporated into the organizations's auth
       3. **System Integrity & Monitoring (SI-4, CM-6):** <br>
 
 ## V. Next Steps & Implementation Plan
-|**Phase**| **Task** | **Responsible Team** | **Deadline**|
+|**Phase**| **Task** | **Responsible Team** | **Time**|
 |---------------------|---------------------|---------------------|---------------------|
-|**I. Policy Approval**|                     |           |          |
-|**II. Technical Remediation**| | | |
-|**III. Access Control Review**| | | |
-|**IV. Training Execution**| | | |
-|**V. Audit & Verification**| | | |
+|**I. Policy Approval**|                     |           |**0-2 weeks**|
+|**II. Technical Remediation**| | |**2-4 weeks**|
+|**III. Access Control Review**| | |**4-6 weeks**|
+|**IV. Training Execution**| | |**4-8 weeks**|
+|**V. Audit & Verification**| | |**3 months**|
 
 
 
