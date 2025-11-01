@@ -40,12 +40,16 @@ The following recommendations must be incorporated into the organizations's auth
 
 ### III. Authenticator Management (IA-5)
 **Policy Statement:** The company should enforce strong password policies for all accounts (**i.e.** privileged and system-level authenticators) prohibiting thee use of organizational context. <br>
+   
+    
     1. **Local Administrator Password Rotation:** Ensure to randomize andd change the local administrator password on all workstations within the office. It must be unique per device and not include company name and year or other similar context. <br>
     2. **Banned List Enforcement:** Implement a banned list that ensures the preventation of the use of any company name, current year, or other common internal abbreviations. <br>
     3. **Complexity Requirements:** All primary passwords must meet the required minimum entropy environment (**i.e.** some companies expect 16 charactetrs minimum, non-dictionary, and not containing any keywords that have to do with the user). <br>
 
 ### IV. Configuration & Access Control Management (CM-6, SC-28, AC-3)
 **Policy Statement:** The company should enforce cryptographic protection for all information at rest and ensure that all configuration settings, specifically the third-part tools and software are properly enforcing the least-privilege access and preventing unauthorized command execution. <br>
+   
+    
     1. **Mandatory Encryption SOP:** Update the Configuration Management SOP to ensure that all corporate laptops, desktops, and portable storage media have FDE prior to being issued. <br>
     2. **Third-Party Access Control Review:** Conduct a detailed and comprehensive review of all the third-party software and access control tools to make sure that they are correctly and strictly enforcing the least-privilege model. This is to ensure that the verification of the administrativee rights cannot improperly bypass the system security boundaries by granting the **Write** access where native Windows denies it. <br>
     3. **System Integrity & Monitoring (SI-4, CM-6):** Ensure and enforce that the OS settings are configured to restrict high-risk applications like PowerShell and command prompts to only those in IT that genuinely need them. Log all attempts to run restricted application's to reduce the potential attack surface for the majority of the organization. <br>
@@ -60,8 +64,8 @@ The following recommendations must be incorporated into the organizations's auth
 |**V. Audit & Verification**|Perform an audit to verify if thiss policy is adhered to 100%. If found non-compliant, then within the week theere should be a remediation plan followed by the management and leadership review.|Management Review|**3 months**|
 
 ## VI. References
-Rhysider, J. (Host). (2022, August 11). Jeremy from Marketing (Episode 36) [Audio podcast - YouTube]. Darknet Diaries.
-
 National Institute of Standards and Technology. (2020a, September). Security and Privacy Controls for Information Systems and Organizations (NIST Special Publication 800-53, Revision 5). U.S. Department of Commerce.
 
 National Institute of Standards and Technology. (2020b, June). Digital Identity Guidelines: Authentication and Lifecycle Management (NIST Special Publication 800-63B, Revision 3). U.S. Department of Commerce.
+
+Rhysider, J. (Host). (2022, August 11). Jeremy from Marketing (Episode 36) [Audio podcast - YouTube]. Darknet Diaries.
