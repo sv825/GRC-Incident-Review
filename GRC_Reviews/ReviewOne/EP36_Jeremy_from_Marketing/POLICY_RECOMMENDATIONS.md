@@ -41,8 +41,8 @@ The following recommendations must be incorporated into the organizations's auth
 ### III. Authenticator Management (IA-5)
 **Policy Statement:** The company should enforce strong password policies for all accounts (**i.e.** privileged and system-level authenticators) prohibiting thee use of organizational context. <br>
       1. **Local Administrator Password Rotation:** Ensure to randomize andd change the local administrator password on all workstations within the office. It must be unique per device and not include company name and year or other similar context. <br>
-      2. **Banned List Enforcement:** Implement  <br>
-      3. **Complexity Requirements:** <br>
+      2. **Banned List Enforcement:** Implement a banned list that ensures the preventation of the use of any company name, current year, or other common internal abbreviations. <br>
+      3. **Complexity Requirements:** All primary passwords must meet the required minimum entropy environment (**i.e.** some companies expect 16 charactetrs minimum, non-dictionary, and not containing any keywords that have to do with the user). <br>
 
 ### IV. Configuration & Access Control Management (CM-6, SC-28, AC-3)
 **Policy Statement:** <br>
