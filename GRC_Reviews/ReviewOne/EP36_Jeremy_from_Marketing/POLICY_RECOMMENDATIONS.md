@@ -52,11 +52,11 @@ The following recommendations must be incorporated into the organizations's auth
 
 ## V. Next Steps & Implementation Plan
 |**Phase**| **Task** | **Responsible Team** | **Deadline**|
-|**I. Policy Approval**|
-|**II. Technical Remediation**|
-|**III. Access Control Review**|
-|**IV. Training Execution**|
-|**V. Audit & Verification**|
+|**I. Policy Approval**|                     |           |          |
+|**II. Technical Remediation**| | | |
+|**III. Access Control Review**| | | |
+|**IV. Training Execution**| | | |
+|**V. Audit & Verification**| | | |
 
 
 
