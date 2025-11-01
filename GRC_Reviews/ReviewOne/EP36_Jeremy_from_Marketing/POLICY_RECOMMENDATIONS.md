@@ -53,11 +53,11 @@ The following recommendations must be incorporated into the organizations's auth
 ## V. Next Steps & Implementation Plan
 |**Phase**| **Task** | **Responsible Team** | **Time**|
 |---------------------|---------------------|---------------------|---------------------|
-|**I. Policy Approval**|                      |Management/Leaders|**0-2 weeks**|
+|**I. Policy Approval**|                      |Leaders|**0-2 weeks**|
 |**II. Technical Remediation**|              |IT Department|**2-4 weeks**|
-|**III. Access Control Review**|             |Senior IT Staff|**4-6 weeks**|
+|**III. Access Control Review**|             |IT Department Head|**4-6 weeks**|
 |**IV. Training Execution**|                 |IT Department|**4-8 weeks**|
-|**V. Audit & Verification**|                |IT Manager & Management Review|**3 months**|
+|**V. Audit & Verification**|                |Management Review|**3 months**|
  
 
 
