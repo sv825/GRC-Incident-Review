@@ -45,10 +45,10 @@ The following recommendations must be incorporated into the organizations's auth
       3. **Complexity Requirements:** All primary passwords must meet the required minimum entropy environment (**i.e.** some companies expect 16 charactetrs minimum, non-dictionary, and not containing any keywords that have to do with the user). <br>
 
 ### IV. Configuration & Access Control Management (CM-6, SC-28, AC-3)
-**Policy Statement:** <br>
-      1. **Mandatory Encryption SOP:** <br>
-      2. **Third-Party Access Control Review:** <br>
-      3. **System Integrity & Monitoring (SI-4, CM-6):** <br>
+**Policy Statement:** The company should enforce cryptographic protection for all information at rest and ensure that all configuration settings, specifically the third-part tools and software are properly enforcing the least-privilege access and preventing unauthorized command execution. <br>
+      1. **Mandatory Encryption SOP:** Update the Configuration Management SOP to ensure that all corporate laptops, desktops, and portable storage media have FDE prior to being issued. <br>
+      2. **Third-Party Access Control Review:** Conduct a detailed and comprehensive review of all the third-party software and access control tools to make sure that they are correctly and strictly enforcing the least-privilege model. This is to ensure that the verification of the administrativee rights cannot improperly bypass the system security boundaries by granting the **Write** access where native Windows denies it. <br>
+      3. **System Integrity & Monitoring (SI-4, CM-6):** Ensure and enforce that the OS settings are configured to restrict high-risk applications like PowerShell and command prompts to only those in IT that genuinely need them. Log all attempts to run restricted application's to reduce the potential attack surface for the majority of the organization. <br>
 
 ## V. Next Steps & Implementation Plan
 |**Phase**| **Task** | **Responsible Team** | **Time**|
