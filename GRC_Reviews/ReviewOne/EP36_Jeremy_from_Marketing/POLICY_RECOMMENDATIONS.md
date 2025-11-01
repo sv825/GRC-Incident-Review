@@ -34,14 +34,14 @@ The following recommendations must be incorporated into the organizations's auth
 
 ### II. Security Awareness Training Overhaul (AT-2, AT-3)
 **Policy Statement:** The company should mandate annual, practical and role-specific security awareness training especially on social engineering tactics and defense. <br>
-      1. **Mandatory Vishing Simulation Drills:** Conduct  <br>
-      2. **MFA Protocol Mandate:** <br>
-      3. **Remote Access Diligence (AU-6):** <br>
+      1. **Mandatory Vishing Simulation Drills:** Conduct monthly unannounced drills on Vishing across all departments. It must specifically test the employeees on the sharing of MFA passcodes. The specific departments that fail the drills should be required to undergo mandatory targeted retraining within the week.  <br>
+      2. **MFA Protocol Mandate:** Implement a policy that strictly forbidds employees from sharing the one-time passcodes or any credential data over the phone, email, or unecrypted chat under any scenario. It should also be noted and stated that **IT personnel WILL NEVER** request these codes. <br>
+      3. **Remote Access Diligence (AU-6):** Implement a policy which instructs employees to lock their workstations immediately upon leaving their desk, regardless of how long they leave their desks. <br>
 
 ### III. Authenticator Management (IA-5)
-**Policy Statement:** <br>
-      1. **Local Administrator Password Rotation:** <br>
-      2. **Banned List Enforcement:** <br>
+**Policy Statement:** The company should enforce strong password policies for all accounts (**i.e.** privileged and system-level authenticators) prohibiting thee use of organizational context. <br>
+      1. **Local Administrator Password Rotation:** Ensure to randomize andd change the local administrator password on all workstations within the office. It must be unique per device and not include company name and year or other similar context. <br>
+      2. **Banned List Enforcement:** Implement  <br>
       3. **Complexity Requirements:** <br>
 
 ### IV. Configuration & Access Control Management (CM-6, SC-28, AC-3)
@@ -54,10 +54,10 @@ The following recommendations must be incorporated into the organizations's auth
 |**Phase**| **Task** | **Responsible Team** | **Time**|
 |---------------------|---------------------|---------------------|---------------------|
 |**I. Policy Approval**|                     |           |**0-2 weeks**|
-|**II. Technical Remediation**| | |**2-4 weeks**|
-|**III. Access Control Review**| | |**4-6 weeks**|
-|**IV. Training Execution**| | |**4-8 weeks**|
-|**V. Audit & Verification**| | |**3 months**|
+|**II. Technical Remediation**|              |           |**2-4 weeks**|
+|**III. Access Control Review**|             |           |**4-6 weeks**|
+|**IV. Training Execution**|                 |           |**4-8 weeks**|
+|**V. Audit & Verification**|                |           |**3 months**|
 
 
 
