@@ -27,28 +27,31 @@ The following critical policy gaps and corresponding NIST SP 800-53 controls wer
 ## IV. Formal Policy Recommendations
 The following recommendations must be incorporated into the organizations's authoritative security policies, SOPs, and employee handbooks.
 ### I. Physical Security Enhancements (PE-3)
-**Policy Statement:** The company should implement layered physical access controls for all restricted areas, including data centers, IT shacks, network closets, and other IT euipment storage rooms.
-    * **Mandatory Surveillance:** Install and maintain 24/7 video surveillance positioned to monitor all entry and exit points of restricted areas (i.e. IT Shack). Retain all footage for a minimum of 60 days.
-    * **Access Integrity (Zero Tolerance):** Placing door stoppers to keep security doors of any type open is explicitly forbidden. Any door to an unauthorized or restricted room found to be open should trigger an automatic security incident response and mandatory retraining for the responsible department. 
-    * **Asset Handling SOP:** Implement an audit proccess on removing or moving the IT assets from restrictetd areas which also require one or more person sign-office and a documented inventory done.
+**Policy Statement:** The company should implement layered physical access controls for all restricted areas, including data centers, IT shacks, network closets, and other IT euipment storage rooms. <br>
+    1. **Mandatory Surveillance:** Install and maintain 24/7 video surveillance positioned to monitor all entry and exit points of restricted areas (i.e. IT Shack). Retain all footage for a minimum of 60 days. <br>
+    2. **Access Integrity (Zero Tolerance):** Placing door stoppers to keep security doors of any type open is explicitly forbidden. Any door to an unauthorized or restricted room found to be open should trigger an automatic security incident response and mandatory retraining for the responsible department. <br>
+    3. **Asset Handling SOP:** Implement an audit proccess on removing or moving the IT assets from restrictetd areas which also require one or more person sign-office and a documented inventory done. <br>
 
 ### II. Security Awareness Training Overhaul (AT-2, AT-3)
-**Policy Statement:** The company should mandate annual, practical and role-specific security awareness training especially on social engineering tactics and defense. 
-    * **Mandatory Vishing Simulation Drills:** Conduct monthly unannounced drills on Vishing across all departments. It must specifically test the employeees on the sharing of MFA passcodes. The specific departments that fail the drills should be required to undergo mandatory targeted retraining within the week. 
-    * **MFA Protocol Mandate:** Implement a policy that strictly forbidds employees from sharing the one-time passcodes or any credential data over the phone, email, or unecrypted chat under any scenario. It should also be noted and stated that **IT personnel WILL NEVER** request these codes.
-    * **Remote Access Diligence (AU-6):** Implement a policy which instructs employees to lock their workstations immediately upon leaving their desk, regardless of how long they leave their desks. 
+**Policy Statement:** The company should mandate annual, practical and role-specific security awareness training especially on social engineering tactics and defense. <br>
+<br>
+    1. **Mandatory Vishing Simulation Drills:** Conduct monthly unannounced drills on Vishing across all departments. It must specifically test the employeees on the sharing of MFA passcodes. The specific departments that fail the drills should be required to undergo mandatory targeted retraining within the week. <br>
+    2. **MFA Protocol Mandate:** Implement a policy that strictly forbidds employees from sharing the one-time passcodes or any credential data over the phone, email, or unecrypted chat under any scenario. It should also be noted and stated that **IT personnel WILL NEVER** request these codes. <br>
+    3. **Remote Access Diligence (AU-6):** Implement a policy which instructs employees to lock their workstations immediately upon leaving their desk, regardless of how long they leave their desks. <br>
 
 ### III. Authenticator Management (IA-5)
 **Policy Statement:** The company should enforce strong password policies for all accounts (**i.e.** privileged and system-level authenticators) prohibiting thee use of organizational context. <br>
-    * **Local Administrator Password Rotation:** Ensure to randomize andd change the local administrator password on all workstations within the office. It must be unique per device and not include company name and year or other similar context.
-    * **Banned List Enforcement:** Implement a banned list that ensures the preventation of the use of any company name, current year, or other common internal abbreviations.
-    * **Complexity Requirements:** All primary passwords must meet the required minimum entropy environment (**i.e.** some companies expect 16 charactetrs minimum, non-dictionary, and not containing any keywords that have to do with the user). 
+   <br>
+    1. **Local Administrator Password Rotation:** Ensure to randomize andd change the local administrator password on all workstations within the office. It must be unique per device and not include company name and year or other similar context. <br>
+    2. **Banned List Enforcement:** Implement a banned list that ensures the preventation of the use of any company name, current year, or other common internal abbreviations. <br>
+    3. **Complexity Requirements:** All primary passwords must meet the required minimum entropy environment (**i.e.** some companies expect 16 charactetrs minimum, non-dictionary, and not containing any keywords that have to do with the user). <br>
 
 ### IV. Configuration & Access Control Management (CM-6, SC-28, AC-3)
 **Policy Statement:** The company should enforce cryptographic protection for all information at rest and ensure that all configuration settings, specifically the third-part tools and software are properly enforcing the least-privilege access and preventing unauthorized command execution. <br>
-    * **Mandatory Encryption SOP:** Update the Configuration Management SOP to ensure that all corporate laptops, desktops, and portable storage media have FDE prior to being issued.
-    * **Third-Party Access Control Review:** Conduct a detailed and comprehensive review of all the third-party software and access control tools to make sure that they are correctly and strictly enforcing the least-privilege model. This is to ensure that the verification of the administrativee rights cannot improperly bypass the system security boundaries by granting the **Write** access where native Windows denies it.
-    * **System Integrity & Monitoring (SI-4, CM-6):** Ensure and enforce that the OS settings are configured to restrict high-risk applications like PowerShell and command prompts to only those in IT that genuinely need them. Log all attempts to run restricted application's to reduce the potential attack surface for the majority of the organization.
+   <br>
+    1. **Mandatory Encryption SOP:** Update the Configuration Management SOP to ensure that all corporate laptops, desktops, and portable storage media have FDE prior to being issued. <br>
+    2. **Third-Party Access Control Review:** Conduct a detailed and comprehensive review of all the third-party software and access control tools to make sure that they are correctly and strictly enforcing the least-privilege model. This is to ensure that the verification of the administrativee rights cannot improperly bypass the system security boundaries by granting the **Write** access where native Windows denies it. <br>
+    3. **System Integrity & Monitoring (SI-4, CM-6):** Ensure and enforce that the OS settings are configured to restrict high-risk applications like PowerShell and command prompts to only those in IT that genuinely need them. Log all attempts to run restricted application's to reduce the potential attack surface for the majority of the organization. <br>
 
 ## V. Next Steps & Implementation Plan
 |**Phase**| **Task** | **Responsible Team** | **Time**|
