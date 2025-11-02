@@ -1,7 +1,7 @@
 GRC Incident Review Series: Darknet Diaries EP. 36 "Jeremy from Marketing"
 
 Methodology/Terminology:
-I utilized the NIST Special Publication 800-53 security controls to identify and determine policy gaps and think of appropriate actionable, policy-level remediation strategies.
+I utilized the NIST Special Publication 800-53 and 800-63B security controls to identify and determine policy gaps and think of appropriate actionable, policy-level remediation strategies.
 
 Document Structure:
 | File | Purpose | GRC Skill Demonstrated |
