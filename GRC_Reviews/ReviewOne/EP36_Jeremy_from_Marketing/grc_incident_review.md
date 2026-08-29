@@ -1,22 +1,47 @@
-# [GRC Incident Review] “Jeremy from Marketing” Darknet Diaries ep. 36 Review One
+# [GRC Incident Review] "Jeremy from Marketing" — Darknet Diaries EP. 36
 
-## Introduction and Context:
-Hello everyone! So, this is my first post in this series. I decided to use Jack Rhysider’s DarkNet Diaries episodes and try to write a review on them from the perspective of analyzing real-world breaches and incident response failures. I am a beginner in this, and I hope that others reading this can learn something and also help me by engaging in discussions so that we all can learn and improve together. 
+Date: October 31, 2025 | Author: Sreya Vavilala
 
-For those who have not watched the episode or podcast, no worries, for I will give a small gist of it. So, what happened was that the company hired a super hacker named Tinker to perform a penetration test and gain access to all the network, systems, etc., within a week. Tinker had used so many techniques to try to exploit any vulnerability, but ultimately, the Blue Team won the war this time. 
+*Edited and revised August 28, 2026*
 
-I will focus more on the gaps that were exposed, the controls that worked, and then share my thoughts on potential fixes for the gaps mentioned during the documentary, which Tinker pointed out. 
+## Introduction and Context
 
-## GRC Failures and Gaps Exposed:
-The first one I noticed was when he mentioned managing to get into the IT shack where all the laptops were on that floor, excluding the personal laptops left by other employees in their cubicles. First, there was no camera positioned to look at the door. Next, when he tried to go in, there was a door stopper keeping it open. Lastly, he was able to take three to four trips to haul laptops to his cubicle area. These points show that there was a failure in Physical Access Control, Access Control for Output Devices. The next was when he managed to bypass the MFA by using a social engineering tactic, Vishing, on the employee in accounting. Gaining access to the Citrix account. Fortunately, it did not have anything on it, as it was a standalone account. AT-2 Security Awareness and AT-3 Role-Based Training policy was a failure in this case, as the person Tinker spoke to had read the MFA code to him. There was one point where Tinker was able to crack the password of an account, which was the company name and the year, so failed IA-5 Authenticator Management. Within the thirty laptops he was going through, he found two that were not encrypted, so there was a failure in CM-6 Configuration Settings. I think that was all. 
+This is the first post in the series. I'm using Jack Rhysider's Darknet Diaries episodes to write reviews from the perspective of analyzing real-world breaches and incident response failures. If you work in this space and see something I've missed or gotten wrong, I want to hear it.
 
-## Successful Controls (The Blue Team's Strengths):
-Of course, some controls worked as the Blue Team had won in this battle. For instance, the Role-Based Access Control was incredibly strong, as apparently the Company's IT team was able to detect suspicious activity when he was using a finance computer to run PowerShell. They had a 12-character password policy, limited remote logins, per-app MFA, and there were even accounts that had him able to crack the password to get into the account, but not have the permission to do anything. 
+For anyone who hasn't heard the episode: a company hired a penetration tester, Tinker, to gain access to their network and systems within a week. He used a wide range of techniques to find an exploitable path, and the Blue Team held.
 
-As I said earlier, there were failures about the encryption on 2 laptops. There was widespread use of disk encryption on corporate and personal laptops, which made it difficult to mount their hard drive. 
+I'll focus on the gaps that were exposed, the controls that worked, and what I'd recommend to close the gaps.
 
-## Policy Recommendations:
-So based on this review, the company should employ social engineering techniques and drills at least to focus on Vishing and Phishing. As the one from the Accounting Department had fallen for the tactic. It should mandate monthly practical testing that mimics these scenarios to improve human defense efficiency and effectiveness. Another is to ensure the installation of cameras on all restricted areas, as Tinker would have had a tougher time getting all those laptops from the IT shack had there been a camera facing the door.
+## GRC Failures and Gaps Exposed
 
-## Conclusion:
-I think that is all from my side. Let me know what you think. Whether to discuss further or to correct me on this review.
+The first was the IT shack, where the laptops on that floor were stored, not counting the personal laptops employees left in their cubicles. No camera was positioned on the door. A door stopper was holding it open. Tinker made three or four trips hauling laptops back to his cubicle. That's a failure of **PE-3 Physical Access Control** and **PE-16 Delivery and Removal**, since equipment left the controlled area with no authorization or record.
+
+Next, he bypassed MFA through vishing, calling an employee in accounting who read the passcode back to him. That gave him the Citrix account, which turned out to be standalone with nothing on it. This is a failure of **AT-2 Literacy Training and Awareness** and **AT-3 Role-Based Training**.
+
+He also cracked a password that was the company name plus the year, which fails **IA-5 Authenticator Management**.
+
+Out of roughly thirty laptops he went through, two were unencrypted. That's **SC-28 Protection of Information at Rest**, with **CM-6 Configuration Settings** as the underlying cause, since those machines had drifted from the secure baseline.
+
+## Successful Controls (The Blue Team's Strengths)
+
+Several controls held, which is why the Blue Team won.
+
+Monitoring worked. The IT team flagged suspicious activity when he ran PowerShell from a finance computer, which is **SI-4 System Monitoring** doing its job.
+
+Access control worked separately from that. There were accounts where he cracked the password, got in, and then couldn't do anything with the access, because permissions were scoped to the role. That's **AC-3 Access Enforcement** and RBAC working as designed.
+
+They also had a 12-character password policy, limited remote logins, and per-app MFA.
+
+Disk encryption was widespread on both corporate and personal laptops, which made mounting the drives difficult. The two unencrypted machines were the exception, not the norm.
+
+## Policy Recommendations
+
+Run social engineering drills focused on vishing and phishing, monthly and unannounced. The accounting employee fell for a live call, and the only way to build resistance to that is repeated practice against realistic scenarios.
+
+Install cameras covering all restricted areas. Tinker would have had a much harder time removing laptops from the IT shack with a camera on the door.
+
+The full remediation plan, with control mappings, root cause analysis, and a phased implementation schedule, is in [POLICY_RECOMMENDATIONS.md](POLICY_RECOMMENDATIONS.md).
+
+## Conclusion
+
+That's my read. If you see it differently or think I've mapped a control wrong, tell me.
