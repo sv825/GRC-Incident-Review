@@ -1,71 +1,79 @@
 # Policy Recommendations and Remediation Plan
-## GRC Incident Review Series - Chapter One: Darknet Diaries EP: 36 "Jeremy from Marketing"
+## GRC Incident Review Series — Review One: Darknet Diaries EP. 36 "Jeremy from Marketing"
+
 _Date: October 31, 2025; Author: Sreya Vavilala_
 
+_Edited and revised August 28, 2026_
+
+> **Note:** This review was originally written against NIST SP 800-63 Revision 3, which was superseded by Revision 4 on August 1, 2025. The authenticator recommendations in Section IV have been updated to Revision 4 guidance.
+
 ## I. Executive Summary
-This document focuses on the remediation strategies and policy approaches required for the comprehensive security control gap analysis done on the penetration testing scenario discussed in Jack Rhysider's Darknet Diaries episode 36 "Jeremy from Marketing". From the incident exposed, the Physical Access Control, Security Awareness Training, and some foundational Authenticator Management weaknesses were exposed. 
+This document covers the remediation strategies and policy approaches required following a security control gap analysis of the penetration testing scenario discussed in Jack Rhysider's Darknet Diaries episode 36, "Jeremy from Marketing." The incident exposed weaknesses in physical access control, security awareness training, authenticator management, and baseline configuration.
 
-However, it should be noted that the Blue Team demonstrated a high degree of defense in several areas such as strong passphrase requirements, full disck encrypttion on users' devices, strict remote access control (AC-3), and advanced role-based application monitoring (SI-4). These are what allowed them to detect and stop the Red Team attacker, Tinker. 
+The Blue Team demonstrated a high degree of defense in several areas: strong passphrase requirements, full disk encryption on user devices, restricted remote access (AC-17), role-based access enforcement (AC-3), and application monitoring (SI-4). These are what allowed them to detect and stop the Red Team attacker, Tinker.
 
-There were still a few identified failures that necessitate the immediate, mandatory updates to corporate security policies to close the human and configuration-level exploitable areas. 
+The failures below require mandatory updates to corporate security policy to close the human and configuration-level exposures.
 
 ## II. Scope and Methodology
-**Scope:** It addresses the deficiencies related to physical security, privileged access management, user training, and information system component configuration.
+**Scope:** Deficiencies related to physical security, privileged access management, user training, and information system component configuration.
 
-**Methodology:** The NIST Special Publication 800-53 Revision 5, NIST Special Publication 800-63 Revision 3, and Jack Rhysider's podcast episode were utilized to map observed incident failures to specific controls
+**Methodology:** NIST SP 800-53 Revision 5, NIST SP 800-63B, and the podcast episode were used to map observed incident failures to specific controls.
 
 ## III. Identified Policy Gaps and Root Cause Analysis
-The following critical policy gaps and corresponding NIST SP 800-53 controls were compromised during the penetration test:
+The following policy gaps and corresponding NIST SP 800-53 controls were compromised during the penetration test:
+
 | Incident Failure | Affected NIST SP 800-53 Control | Root Cause Analysis |
-|---------------------|---------------------|---------------------|
-|**Physical Security Breach (IT Shack)** |**PE-3** Physical Access Control (NIST, 2020a) | Failed to implement physical security such as cameras and secured doors, and severe user diligence as there was a door stopper in a restricted area. |
-|**Vishing/MFA Bypass** |**AT-2** Security Awareness Training, **AT-3** Role-Based Training (NIST, 2020a) | There was a lack of awareness of social engineering training focused on Vishing vectors and MFA protocol boundaries|
-|**Weak Admin Password** |**IA-5** Authenticator Management (NIST, 2020a)| There was use of publicly known organizational context, such as the company name and year even with a strong user password policy in place.|
-|**Unencrypted Assets** |**SC-28** Protecting of information at rest  to encrypt sensitive data when it is stored (NIST, 2020a)| There is an inconsistent enforcement of the Full Disk Encryption Standard Operating Procedures; The systems were not consistently managed back to the secure baseline. This allowed two laptops to "drift" into an vulnerable state while being stored.|
-|**Unquoted Service Path Exploit**|**CM-6** Configuration Settings, **AC-3** Access Enforcement (NIST, 2020a)| The failure to properly quote service path directly violates the requirement for secure baseline configuration; the policy was weakened by the Third-party access control tool as it's configuration overrode the Native Windows **Write** access permissions allowing the Red Team the ability to drop his malware into the system directory, enabling him to gain remote _System Level_ privileges.|
+|---|---|---|
+| **Physical Security Breach (IT Shack)** | **PE-3** Physical Access Control, **PE-16** Delivery and Removal (NIST, 2020) | No camera covering the door and no secured entry, compounded by a door stopper holding a restricted room open. Equipment left the controlled area across multiple trips with no authorization and no record. |
+| **Vishing / MFA Bypass** | **AT-2** Literacy Training and Awareness, **AT-3** Role-Based Training (NIST, 2020) | No social engineering training covering vishing vectors or MFA protocol boundaries. |
+| **Weak Admin Password** | **IA-5** Authenticator Management (NIST, 2020) | Use of publicly known organizational context, the company name and year, despite a strong user password policy elsewhere. |
+| **Unencrypted Assets** | **SC-28** Protection of Information at Rest (NIST, 2020) | Inconsistent enforcement of the full disk encryption SOP. Systems were not consistently returned to the secure baseline, allowing two laptops to drift into a vulnerable state while stored. |
+| **Unquoted Service Path Exploit** | **CM-6** Configuration Settings, **AC-3** Access Enforcement (NIST, 2020) | The unquoted service path violates the secure baseline configuration requirement. A third-party access control tool's configuration overrode native Windows **Write** permissions, letting the Red Team drop malware into the system directory and gain remote _System Level_ privileges. |
 
 ## IV. Formal Policy Recommendations
-The following recommendations must be incorporated into the organizations's authoritative security policies, SOPs, and employee handbooks.
-### I. Physical Security Enhancements (PE-3)
-**Policy Statement:** The company should implement layered physical access controls for all restricted areas, including data centers, IT shacks, network closets, and other IT euipment storage rooms. <br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;1. **Mandatory Surveillance:** Install and maintain 24/7 video surveillance positioned to monitor all entry and exit points of restricted areas (i.e. IT Shack). Retain all footage for a minimum of 60 days. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;2. **Access Integrity (Zero Tolerance):** Placing door stoppers to keep security doors of any type open is explicitly forbidden. Any door to an unauthorized or restricted room found to be open should trigger an automatic security incident response and mandatory retraining for the responsible department. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;3. **Asset Handling SOP:** Implement an audit proccess on removing or moving the IT assets from restrictetd areas which also require one or more person sign-office and a documented inventory done. <br>
+The following recommendations should be incorporated into the organization's authoritative security policies, SOPs, and employee handbooks.
 
-### II. Security Awareness Training Overhaul (AT-2, AT-3)
-**Policy Statement:** The company should mandate annual, practical and role-specific security awareness training especially on social engineering tactics and defense. <br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;1. **Mandatory Vishing Simulation Drills:** Conduct monthly unannounced drills on Vishing across all departments. It must specifically test the employeees on the sharing of MFA passcodes. The specific departments that fail the drills should be required to undergo mandatory targeted retraining within the week. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;2. **MFA Protocol Mandate:** Implement a policy that strictly forbidds employees from sharing the one-time passcodes or any credential data over the phone, email, or unecrypted chat under any scenario. It should also be noted and stated that **IT personnel WILL NEVER** request these codes. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;3. **Remote Access Diligence (AU-6):** Implement a policy which instructs employees to lock their workstations immediately upon leaving their desk, regardless of how long they leave their desks. <br>
+### 1. Physical Security Enhancements (PE-3, PE-16)
+**Policy Statement:** The company should implement layered physical access controls for all restricted areas, including data centers, IT shacks, network closets, and other IT equipment storage rooms.
 
-### III. Authenticator Management (IA-5)
-**Policy Statement:** The company should enforce strong password policies for all accounts (**i.e.** privileged and system-level authenticators) prohibiting thee use of organizational context. <br>
-   <br>
-&nbsp;&nbsp;&nbsp;&nbsp;1. **Local Administrator Password Rotation:** Ensure to randomize andd change the local administrator password on all workstations within the office. It must be unique per device and not include company name and year or other similar context. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;2. **Banned List Enforcement:** Implement a banned list that ensures the preventation of the use of any company name, current year, or other common internal abbreviations. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;3. **Complexity Requirements:** All primary passwords must meet the required minimum entropy environment (**i.e.** some companies expect 16 charactetrs minimum, non-dictionary, and not containing any keywords that have to do with the user). <br>
+1. **Mandatory Surveillance:** Install and maintain 24/7 video surveillance positioned to monitor all entry and exit points of restricted areas, including the IT shack. Retain footage for a minimum of 60 days.
+2. **Access Integrity (Zero Tolerance):** Using door stoppers to hold security doors open is explicitly forbidden. Any restricted room found with its door propped open triggers an automatic security incident response and mandatory retraining for the responsible department.
+3. **Asset Handling SOP:** Implement an authorization process for removing or relocating IT assets from restricted areas, requiring at least one sign-off and a documented inventory record.
 
-### IV. Configuration & Access Control Management (CM-6, SC-28, AC-3)
-**Policy Statement:** The company should enforce cryptographic protection for all information at rest and ensure that all configuration settings, specifically the third-part tools and software are properly enforcing the least-privilege access and preventing unauthorized command execution. <br>
-   <br>
-&nbsp;&nbsp;&nbsp;&nbsp;1. **Mandatory Encryption SOP:** Update the Configuration Management SOP to ensure that all corporate laptops, desktops, and portable storage media have FDE prior to being issued. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;2. **Third-Party Access Control Review:** Conduct a detailed and comprehensive review of all the third-party software and access control tools to make sure that they are correctly and strictly enforcing the least-privilege model. This is to ensure that the verification of the administrativee rights cannot improperly bypass the system security boundaries by granting the **Write** access where native Windows denies it. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;3. **System Integrity & Monitoring (SI-4, CM-6):** Ensure and enforce that the OS settings are configured to restrict high-risk applications like PowerShell and command prompts to only those in IT that genuinely need them. Log all attempts to run restricted application's to reduce the potential attack surface for the majority of the organization. <br>
+### 2. Security Awareness Training Overhaul (AT-2, AT-3)
+**Policy Statement:** The company should mandate annual, practical, role-specific security awareness training with particular focus on social engineering tactics and defense.
 
-## V. Next Steps & Implementation Plan
-|**Phase**| **Task** | **Responsible Team** | **Time**|
-|---------------------|---------------------|---------------------|---------------------|
-|**I. Policy Approval**|Draft a Policy Review and have the Executive sign-off on it.|Leaders|**0-2 weeks**|
-|**II. Technical Remediation**|Install surveillance at all restricted areas. Implement automated FDE compliance checks and rules. **Make all local administrator passwords random and strong**|IT Department|**2-4 weeks**|
-|**III. Access Control Review**|Teams must review and configure third-party access tools to enssure least privilege is correctly enforced.|IT Department Head|**4-6 weeks**|
-|**IV. Training Execution**|Develop new and updated Vishing simulation contentt for drills. Then conduct a company-wide drill and targeted retraining.|IT Department|**4-8 weeks**|
-|**V. Audit & Verification**|Perform an audit to verify if thiss policy is adhered to 100%. If found non-compliant, then within the week theere should be a remediation plan followed by the management and leadership review.|Management Review|**3 months**|
+1. **Mandatory Vishing Simulation Drills:** Conduct monthly unannounced vishing drills across all departments, specifically testing whether employees will share MFA passcodes. Departments that fail must undergo targeted retraining within the week.
+2. **MFA Protocol Mandate:** Strictly forbid employees from sharing one-time passcodes or any credential data over phone, email, or unencrypted chat under any circumstance. The policy must state plainly that **IT personnel will never request these codes**.
+3. **Workstation Lock Requirement (AC-11):** Require employees to lock their workstations immediately upon leaving their desk, regardless of how long they expect to be away.
+
+### 3. Authenticator Management (IA-5)
+**Policy Statement:** The company should enforce strong authenticator requirements for all accounts, including privileged and system-level authenticators, and prohibit the use of organizational context in passwords.
+
+1. **Local Administrator Password Randomization:** Randomize the local administrator password on every workstation, unique per device, so that compromise of one machine does not grant access to others. Passwords must not include the company name, year, or similar context.
+2. **Blocklist Enforcement:** Screen all prospective passwords against a blocklist covering known breached credentials, dictionary words, repetitive or sequential characters, and context-specific terms including the company name, current year, and common internal abbreviations. This aligns with NIST SP 800-63B Revision 4.
+3. **Length Over Composition:** Set a minimum length of 16 characters for privileged accounts and permit passphrases up to at least 64 characters. Per SP 800-63B Revision 4, do not impose composition rules requiring specific character types, and do not force periodic rotation of user passwords absent evidence of compromise. Length and blocklist screening deliver more resistance than complexity rules, which push users toward predictable substitutions.
+
+### 4. Configuration and Access Control Management (CM-6, SC-28, AC-3)
+**Policy Statement:** The company should enforce cryptographic protection for all information at rest and ensure configuration settings, particularly for third-party tools and software, properly enforce least-privilege access and prevent unauthorized command execution.
+
+1. **Mandatory Encryption SOP:** Update the Configuration Management SOP so that all corporate laptops, desktops, and portable storage media have full disk encryption enabled prior to issue.
+2. **Third-Party Access Control Review:** Review all third-party software and access control tools to confirm they correctly enforce the least-privilege model, and specifically that administrative rights granted by those tools cannot bypass system security boundaries by granting **Write** access where native Windows denies it.
+3. **System Integrity and Monitoring (SI-4, CM-6):** Configure operating system settings to restrict high-risk applications such as PowerShell and command prompt to IT personnel who genuinely require them. Log all attempts to run restricted applications to reduce the attack surface across the wider organization.
+
+## V. Next Steps and Implementation Plan
+
+| **Phase** | **Task** | **Responsible Team** | **Time** |
+|---|---|---|---|
+| **I. Policy Approval** | Draft the policy revisions and obtain executive sign-off. | Leadership | **0–2 weeks** |
+| **II. Technical Remediation** | Install surveillance in all restricted areas. Implement automated FDE compliance checks. Randomize all local administrator passwords, unique per device. | IT Department | **2–4 weeks** |
+| **III. Access Control Review** | Review and reconfigure third-party access tools to ensure least privilege is correctly enforced. | IT Department Head | **4–6 weeks** |
+| **IV. Training Execution** | Develop updated vishing simulation content, then run a company-wide drill followed by targeted retraining. | IT Department | **4–8 weeks** |
+| **V. Audit and Verification** | Audit adherence to the revised policy. Where non-compliance is found, produce a remediation plan within the week for management and leadership review. | Management Review | **3 months** |
 
 ## VI. References
-National Institute of Standards and Technology. (2020a, September). Security and Privacy Controls for Information Systems and Organizations (NIST Special Publication 800-53, Revision 5). U.S. Department of Commerce.
+National Institute of Standards and Technology. (2020, September). *Security and privacy controls for information systems and organizations* (NIST Special Publication 800-53, Revision 5). U.S. Department of Commerce. https://doi.org/10.6028/NIST.SP.800-53r5
 
-National Institute of Standards and Technology. (2020b, June). Digital Identity Guidelines: Authentication and Lifecycle Management (NIST Special Publication 800-63B, Revision 3). U.S. Department of Commerce.
+National Institute of Standards and Technology. (2025, July). *Digital identity guidelines: Authentication and authenticator management* (NIST Special Publication 800-63B, Revision 4). U.S. Department of Commerce.
 
-Rhysider, J. (Host). (2022, August 11). Jeremy from Marketing (Episode 36) [Audio podcast - YouTube]. Darknet Diaries.
+Rhysider, J. (Host). (2022, August 11). Jeremy from marketing (No. 36) [Audio podcast episode]. In *Darknet Diaries*.
